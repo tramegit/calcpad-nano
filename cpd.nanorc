@@ -1,0 +1,45 @@
+## Calcpad files (*.cpd)
+##
+
+syntax "Calcpad" "\.cpd$"
+
+# Numbers
+color mint "/*[0-9]/*"
+
+# letters
+color normal "/*[A-Z_a-z]/*"
+color red "\<(True|False)\>"
+
+## operators and brakets
+color brightred "[+*=\^]" "<" ">" "/" "-"
+color brightred "[@\~]" 
+color lightmagenta "\(" "\)" "\{" "\}" "\[" "\]"
+
+# Anything after two single or double quotes
+#color green ""(\\.|[^"])*"|'(\\.|[^'])*'"
+color green ""(\\.|[^])*|'(\\.|[^])*"
+color grey "'(\\.|[^])*|'(\\.|[^])*"
+
+# Comments
+color magenta "^.*#"
+
+# Logic keywords
+color mauve "#(if|else|repeat|loop|break|continue|include|global|local|def|end|def)"
+
+#Output control and breakpoints
+color mauve "#(hide|show|pre|post|val|equ|noc|nosub|novar|varsub|split|wrap|round|pause|input|deg|rad|gra)"
+
+# special functions
+color purple "\$(plot|Map|Root|Find|Sup|Inf|Area|Integral|Slope|Sum|Product|Repeat)"
+
+
+#Units
+color brightblue "\<(g|hg|kg|t|kt|Mt|Gt|dg|cg|mg|μg|Da)\>"
+color brightblue "\<(rev|"|'|°|rad|deg|gra|%|‰)\>"
+color brightblue "\<(m|km|dm|cm|mm|μm|nm|pm|AU|ly)\>"
+color brightblue "\<(Hz|kHz|MHz|GHz|THz|mHz|μHz|nHz|pHz|rpm|kmh)\>"
+color brightblue "\<(N|daN|hN|kN|MN|GN|TN|gf|kgf|tf|dyn|Nm|kNm)\>"
+color brightblue "\<(Pa|daPa|hPa|kPa|MPa|GPa|TPa|dPa|cPa|mPa|μPa|nPa|pPa|bar|mbar|μbar|atm|at|Torr|mmHg)\>"
+
+
+
