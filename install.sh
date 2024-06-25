@@ -1,6 +1,9 @@
 #!/bin/sh
-wget https://github.com/tramegit/calcpad-nano/blob/main/cpd.nanorc
+
+wget https://raw.githubusercontent.com/tramegit/calcpad-nano/main/install.sh; sudo sh install.sh
+wget https://raw.githubusercontent.com/tramegit/calcpad-nano/main/cpd.nanorc
 mv ./cpd.nanorc /usr/share/nano/cpd.nanorc
-echo -e "\n The file cpd.nanorc was installed with success!"
+rm ./install.sh
+echo -e "The file cpd.nanorc was installed with success!"
 
 

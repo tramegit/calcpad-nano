@@ -4,7 +4,7 @@
 ## Install on Debian-based systems
 
 ```
- wget https://github.com/tramegit/calcpad-nano/install.sh | sh
+wget https://raw.githubusercontent.com/tramegit/calcpad-nano/main/install.sh; sudo sh install.sh
 ``` 
 
 
