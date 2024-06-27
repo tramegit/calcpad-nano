@@ -4,42 +4,74 @@
 syntax "Calcpad" "\.cpd$"
 
 # Numbers
-color mint "/*[0-9]/*"
+color orange "/*[0-9 . ]/*"
 
 # letters
 color normal "/*[A-Z_a-z]/*"
 color red "\<(True|False)\>"
 
 ## operators and brakets
-color brightred "[+*=\^]" "<" ">" "/" "-"
+color brightred "[+*=\^÷≥≤⦼!-≡≠><∧∨⊕∡°Øø‾_]" "<" ">" "/" "-"
 color brightred "[@\~]" 
 color lightmagenta "\(" "\)" "\{" "\}" "\[" "\]"
 
 # Anything after two single or double quotes
 #color green ""(\\.|[^"])*"|'(\\.|[^'])*'"
-color green ""(\\.|[^])*|'(\\.|[^])*"
-color grey "'(\\.|[^])*|'(\\.|[^])*"
+color mint ""(\\.|[^])*|'(\\.|[^])*"
+color green "'(\\.|[^])*|'(\\.|[^])*"
 
 # Comments
 color magenta "^.*#"
 
 # Logic keywords
 color mauve "#(if|else|repeat|loop|break|continue|include|global|local|def|end|def)"
-
+color mauve "\<(if)\>"
 #Output control and breakpoints
 color mauve "#(hide|show|pre|post|val|equ|noc|nosub|novar|varsub|split|wrap|round|pause|input|deg|rad|gra)"
 
-# special functions
-color purple "\$(plot|Map|Root|Find|Sup|Inf|Area|Integral|Slope|Sum|Product|Repeat)"
+# Graphing and plotting
+color purple "\$(Plot|Map|Root|Find|Sup|Inf|Area|Integral|Slope|Sum|Product|Repeat)"
 
 
-#Units
-color brightblue "\<(g|hg|kg|t|kt|Mt|Gt|dg|cg|mg|μg|Da)\>"
-color brightblue "\<(rev|"|'|°|rad|deg|gra|%|‰)\>"
-color brightblue "\<(m|km|dm|cm|mm|μm|nm|pm|AU|ly)\>"
-color brightblue "\<(Hz|kHz|MHz|GHz|THz|mHz|μHz|nHz|pHz|rpm|kmh)\>"
-color brightblue "\<(N|daN|hN|kN|MN|GN|TN|gf|kgf|tf|dyn|Nm|kNm)\>"
-color brightblue "\<(Pa|daPa|hPa|kPa|MPa|GPa|TPa|dPa|cPa|mPa|μPa|nPa|pPa|bar|mbar|μbar|atm|at|Torr|mmHg)\>"
+## Built-in functions
+color brightyellow "\<(sin|cos|tan|csc|sec|cot)\>"
+color brightyellow "\<(sinh|cosh|tanh|csch|sech|coth)\>"
+color brightyellow "\<(asin|acos|atan|atan2|acsc|asec|acot)\>"
+color brightyellow "\<(asinh|acosh|atanh|acsch|asech|acoth)\>"
+color brightyellow "\<(log|ln|log_2|exp|sqr|sqrt|cbrt|root)\>"
+color brightyellow "\<(round|floor|ceiling|trunc)\>"
+color brightyellow "\<(mod|gcd|lcm)\>"
+color brightyellow "\<(abs|re|im|phase)\>"
+color brightyellow "\<(min|max|sum|sumsq|srss|avarage|product|mean|take|line|spline)\>"
+color brightyellow "\<(switch|not|and|or|xor|sign|random)\>"
 
-
+#UNITS
+# Mass
+color lime "\<(g|hg|kg|t|kt|Mt|Gt|dg|cg|mg|μg|Da)\>"
+#Angle
+color lime "\<(rev|"|'|°|°|rad|deg|gra|%|‰)\>"
+#Length
+color lime "\<(m|km|dm|cm|mm|μm|nm|pm|AU|ly)\>"
+color lime "\<(th|in|ft|yd|ch|fur|mi|ftm|cable|nmi|li|rod|pole|perch|lea)\>"
+#Time
+color lime "\<(s|ms|μs|ns|ps|min|h|d|w|y)\>"
+#Frequency and speed
+color lime "\<(Hz|kHz|MHz|GHz|THz|mHz|μHz|nHz|pHz|rpm|kmh|mph|knot)\>"
+#Electric current
+color lime "\<(A|kA|MA|GA|TA|mA|μA|nA|pA)\>"
+#Temperature, amount of substance and luminous intensity
+color lime "\<(°C|°F|°R|Δ°C|Δ°F|K|mol|cd)\>"
+#Area
+color lime "\<(a|daa|ha|rood|ac)\>"
+#Force
+color lime "\<(N|daN|hN|kN|MN|GN|TN|gf|kgf|tf|dyn|Nm|kNm|kip|lbf|tonf|pdl)\>"
+#Pressure
+color lime "\<(Pa|daPa|hPa|kPa|MPa|GPa|TPa|dPa|cPa|mPa|μPa|nPa|pPa|bar|mbar|μbar|atm|at|Torr|mmHg)\>"
+color lime "\<(osi|osfpsi|psi|psf|ksi|ksf|tsi|tsf|inHg)\>"
+#Viscosity
+color lime "\<(P|cP|St|cSt)\>"
+#Energy work
+color lime "\<(J|kJ|MJ|GJ|TJ|mJ|μJ|nJ|pJ|Wh|kWh|MWh|GWh|TWh|mWh|μWh|nWh|pWh|eV|keV|MeV|GeV|TeV|PeV|EeV|cal|kcal|erg|BTU|therm|quad)\>"
+#Power
+color lime "\<(W|kW|MW|GW|TW|mW|μW|nW|pW|hpM|ks|VA|kVA|MVA|GVA|TVA|mVA|μVA|nVA|pVA|VAR|kVAR|MVAR|GVAR|TVAR|mVAR|μVAR|nVAR|pVAR|hp|hpE|hpS)\>"
 

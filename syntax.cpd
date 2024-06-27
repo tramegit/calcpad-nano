@@ -1,0 +1,45 @@
+"CALCPAD SYNTAX HIGHLIGHTING FOR NANO
+"MAIN COMMENT 
+'FILE FOR TEST
+
+a = 1234567910.0 'Numbers
+
+MYvar = 100 deg  
+
+sin(MYvar) 
+
+H_min = min(2;45;6)
+
+f(x)= x^2
+
+$Integral{f(x) @ x = 0 : pi}
+
+$Plot{ f(x) @ x = 0 : 100}
+
+M(x) = cos(x)
+
+$Plot{ M(x) @ x = 0 : 360} 
+
+'LENGTH AND AREA
+H = 5 m
+B = 500 cm
+A = B * H | m^2
+
+'FORCE AND MOMENT
+F = 100 kN
+L = 30 in
+M = F * L
+
+
+'FLOW CONTROL AND CONDITIONAL
+#nosub
+#repeat 8
+	  M = M-(500 kN*in) | kN*in
+	#if M > 1000 kN*in
+	  'THE MOMENT IS GREATER THAN 1000 kN.in!
+       	#else if M == 1000 kN*in
+	  'THE MOMENT IS EQUAL TO 1000 kN.in!
+	#else
+	  'THE MOMENT IS SMALLER THAN 1000 kN.in!
+	#end if
+#loop
