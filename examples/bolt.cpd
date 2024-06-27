@@ -1,0 +1,15 @@
+"Cisalhamento do parafuso
+'NBR 8800:2024
+
+'Material
+fub = 820 MPa
+
+'Diâmetro do parafuso
+db = 12.7 mm
+
+'Área do parafuso
+Ag =  (pi * db^2) / 4 | cm^2
+
+'V_rd corte no plano da rosca
+V_rd = (0.45 * Ag * fub) / 1.35
+

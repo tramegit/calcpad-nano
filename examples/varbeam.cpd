@@ -1,0 +1,53 @@
+" Beam with varying moment of inertia
+' By Mohrs Analogy
+
+'<b> Variables </b>
+ha = 60 cm
+hb = 20 cm
+b = 20 cm
+L = 600 cm
+P = 10 kN
+
+' <b> Material </b>
+E = 2000 kN/cm^2
+
+' <b>Height function</b>
+h(x) = ha - ((ha-hb)/L) * x
+h(0 cm)
+h(600 cm)
+
+' <b>Inertia function</b>
+I(x) = (b * h(x)^3) / 12
+I(0 cm)
+I(L)
+
+' <b>Moment function</b>
+M(x)=P*(L-x)
+M(0 cm)
+M(L/2) | kN*cm
+M(L)   | kN*cm
+
+' <b>Conjugate beam load function</b>
+
+qvc(x) = M(x) / (E * I(x))
+
+' <b> Rotation at free end </b> 
+' Radians
+ 
+rot = $Integral {qvc(x) @ x = 0 cm : L} * 1 rad
+
+' <b> Displacement at free end </b>
+
+disp = $Integral { qvc(x)*(L-x) @ x = 0 cm : L} | mm
+
+#show 
+  
+ #if disp > 19 mm
+   'The displacement is almost equal to the theoretical value!
+   19 mm / disp
+ #end if
+
+
+
+ 
+
