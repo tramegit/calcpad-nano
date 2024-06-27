@@ -1,5 +1,10 @@
 # calcpad-nano
-## Syntax highlighting for Nano
+ Syntax highlighting for Nano
+
+## Links
+[Calcpad repository](https://github.com/Proektsoftbg/Calcpad)
+
+[Nano Editor](https://www.nano-editor.org/)
 
 ## Install syntax highting on Debian-based systems
 
