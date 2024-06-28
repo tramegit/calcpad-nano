@@ -45,6 +45,7 @@ color brightyellow "\<(abs|re|im|phase)\>"
 color brightyellow "\<(min|max|sum|sumsq|srss|avarage|product|mean|take|line|spline)\>"
 color brightyellow "\<(switch|not|and|or|xor|sign|random)\>"
 
+
 #UNITS
 # Mass
 color lime "\<(g|hg|kg|t|kt|Mt|Gt|dg|cg|mg|μg|Da)\>"
